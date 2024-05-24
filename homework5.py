@@ -1,0 +1,16 @@
+immutable_var = (15.5 , 20 , "белый" , "красный" , True , False)
+print(immutable_var)
+#immutable_var [1] = 21
+print("Замена в списке не возможна, так как он создан как кортеж. Необходимо исправить кортеж на список.")
+mutable_list = [15.5 , 20 , "белый" , "красный" , True , False]
+print(mutable_list)
+print(mutable_list[:3])
+mutable_list [1] = input("Введите целое число: ")
+print(mutable_list)
+print("было " , immutable_var[1] , "стало" , mutable_list[1])
+poisk = input("Введите значение для проверки списка: ")
+sravnil = str(poisk in mutable_list)
+print(sravnil . replace(str(True), "Есть такое значение") .replace(str(False), "Значение не найдено."))
+Otvet = input("Добавьте новый элемент в список: ")
+mutable_list.append(Otvet)
+print("Список обновлен " , mutable_list)

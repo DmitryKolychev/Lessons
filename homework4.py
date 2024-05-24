@@ -1,0 +1,7 @@
+my_string = input("Введите текст: ")
+print("В вашем тексте", len(my_string), "символов.")
+print(my_string . upper())
+print(my_string . lower())
+print(my_string . replace(" " , ""))
+print("Первый символ в вашем тексте:", my_string[0].upper())
+print("Последний символ в вашем тексте:", my_string[-1].upper())
