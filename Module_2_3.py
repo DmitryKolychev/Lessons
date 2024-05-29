@@ -7,6 +7,8 @@ while a <= (len(my_list)-1):
         print(number)
         a = a + 1
         my_list_new.append(number)
+    elif number < 0:
+        break
     else:
         a = a + 1
 print('Числовой ряд закончился')
