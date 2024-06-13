@@ -47,53 +47,6 @@ result2 = bukva_structure_sum(data_structure)
 print(f'Сумма всех букв (и чисел, сохранненых как буквы): {result2}')
 
 
-# def structure_sum(*args):
-#     _List = 0
-#     _Tuple = 0
-#     _Set = 0
-#     _Dict = 0
-#     Vsego = [_List, _Tuple, _Set, _Dict]
-#     for i in args:
-#         if isinstance(i, list):
-#             _List += 1
-#             Vsego[0] = _List
-#             # return _List
-#         elif isinstance(i, tuple):
-#             _Tuple += 1
-#             Vsego[1] = _Tuple
-#             # return _List
-#         elif isinstance(i, set):
-#             _Set += 1
-#             Vsego[2] = _Set
-#             # return _List
-#         elif isinstance(i, dict):
-#             _Dict += 1
-#             Vsego[3] = _Dict
-#             # return _List
-#         for j in i:
-#             if isinstance(j, list):
-#                 _List += 1
-#                 Vsego[0] = _List
-#                 # return _List
-#             elif isinstance(j, tuple):
-#                 _Tuple += 1
-#                 Vsego[1] = _Tuple
-#                 # return _List
-#             elif isinstance(j, set):
-#                 _Set += 1
-#                 Vsego[2] = _Set
-#                 # return _List
-#             elif isinstance(j, dict):
-#                 _Dict += 1
-#                 Vsego[3] = _Dict
-#                 # return _List
-#     return _List
-#
-#
-#
-# result3 = structure_sum(data_structure2)
-# print(f'количество: {result3}')
-
 def structure_sum(*args):
     _List = 0
     for i in args:
