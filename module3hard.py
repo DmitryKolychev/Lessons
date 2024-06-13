@@ -5,14 +5,7 @@ data_structure = [
     "Hello",
     ((), [{(2, 'Urban', ('Urban2', 35))}])
 ]
-data_structure2 = [
-    {'a': 4, 'b': 5}, (8, 5, [9, 5, 4]),
-    (6, {'cube': 7, 'drum': 8}),
-    "Hello",
-    ((), [{(2, 'Urban', ('Urban2', 35))}])
-]
-
-
+print(data_structure)
 def calculate_structure_sum(*args):
     summa = 0
     for i in args:
@@ -79,12 +72,12 @@ def structure_sum3(*args):
     _Set = 0
     for i in args:
         if isinstance(i, (tuple, list)):
-            _Set += structure_sum2(*i)
+            _Set += structure_sum3(*i)
             if isinstance(i, set):
                 _Set += 1
         elif isinstance(i, set):
             _Set += 1
-            _Set += structure_sum2(*i)
+            _Set += structure_sum3(*i)
 
     return _Set
 
@@ -95,18 +88,17 @@ def structure_sum4(*args):
         if isinstance(i, dict):
             _Dict += 1
         elif isinstance(i, (tuple, list, set)):
-            _Dict += structure_sum2(*i)
+            _Dict += structure_sum4(*i)
             if isinstance(i, dict):
                 _Dict += 1
 
     return _Dict
 
 
-result3 = structure_sum(data_structure2)
-result4 = structure_sum2(data_structure2)
-result5 = structure_sum3(data_structure2)
-result6 = structure_sum4(data_structure2)
-print(data_structure2)
+result3 = structure_sum(data_structure)
+result4 = structure_sum2(data_structure)
+result5 = structure_sum3(data_structure)
+result6 = structure_sum4(data_structure)
 print(f'количество списков []: {result3}')
 print(f'количество кортежов (): {result4}')
 print(f'количество множеств : {result5}')
