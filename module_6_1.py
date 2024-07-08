@@ -16,16 +16,15 @@ class Plant:
         if self.edible == True:
             print(f'{self.name} - съедобное')
             return
-        else: print(f'{self.name} - несъедобное')
+        else:
+            print(f'{self.name} - несъедобное')
         return
-
 
 
 class Mammal(Animal):
 
     def eat(self, food):
-        self.food = food.edible
-        if self.food == True:
+        if food.edible == True:
             print(f'{self.name} съел {food.name}')
             self.fed = True
             self.alive = True
@@ -38,8 +37,7 @@ class Mammal(Animal):
 class Predator(Animal):
 
     def eat(self, food):
-        self.food = food.edible
-        if self.food == True:
+        if food.edible == True:
             print(f'{self.name} съел {food.name}')
             self.fed = True
             self.alive = True
@@ -64,7 +62,6 @@ p2 = Fruit('Заводной апельсин')
 
 Plant.eat(p1)
 Plant.eat(p2)
-
 
 print(a1.name)
 print(p1.name)
