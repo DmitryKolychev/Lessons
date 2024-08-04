@@ -2,9 +2,10 @@ import itertools
 
 
 def all_variants(text):
-    for i in range(1, len(text) + 1):
-        for j in itertools.combinations(text, i):
-            yield ''.join(j)
+    length = len(text)
+    for start in range(length):
+        for end in range(start + 1, length + 1):
+            yield text[start:end]
 
 
 a = all_variants("abc")
